@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="container my-5">
+  <form    (ngSubmit)="addEmloyee()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="addemplo.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="addemplo.email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" class="form-control" id="phone" name="phone" required [(ngModel)]="addemplo.phone">
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input type="number" class="form-control" id="salary" name="salary" required [(ngModel)]="addemplo.salary">
+    </div>
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <input type="text" class="form-control" id="department" name="department" required [(ngModel)]="addemplo.department">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </form>
+</div>

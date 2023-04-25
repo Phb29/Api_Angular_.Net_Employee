@@ -1,0 +1,32 @@
+<div class="container my-5">
+<h1  > Employees</h1>
+<table class="table" *ngIf="employees && employees.length>0"> 
+<!-- vai aparecer se tiver e for maior q tamanho 0 -->
+  <thead>
+    <tr>
+      <th >Id</th>
+      <th >Name</th>
+      <th >Email</th>
+      <th >Phone</th>
+      <th >Salary</th>
+      <th >Department</th>
+      <th ></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let employee of employees">
+      <th scope="row">{{employee.id}}</th>
+      <td>{{employee.name}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.phone}}</td>
+      <td>{{employee.salary}}</td>
+      <td>{{employee.department}}</td>
+      <td><a [routerLink]="['edit', employee.id]">Details</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+<p *ngIf="!employees || employees.length <=0">No Employees Found</p>
+<!-- aparece se nao tiver employees ou employee.letth<=0 -->
+</div>

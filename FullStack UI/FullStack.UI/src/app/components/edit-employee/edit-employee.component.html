@@ -1,0 +1,25 @@
+<div *ngIf="employee">
+  <h2>Edit Employee </h2>
+  <form (ngSubmit)="updateEmployee()">
+ <label>Id</label>
+    <input [(ngModel)]="employee.id" name="id" type="text" readonly class="form-control"/>
+    <label>Name</label>
+    <input [(ngModel)]="employee.name" name="name" type="text" class="form-control"/>
+
+    <label>Email</label>
+    <input [(ngModel)]="employee.email" name="email" type="email" class="form-control"/>
+
+    <label>Phone</label>
+    <input [(ngModel)]="employee.phone" name="phone" type="tel" class="form-control"/>
+
+    <label>Salary</label>
+    <input [(ngModel)]="employee.salary" name="salary" type="number" class="form-control"/>
+
+    <label>Department</label>
+    <input [(ngModel)]="employee.department" name="department" type="text" class="form-control"/>
+
+    <button type="submit" class="btn btn-primary mr-5">Save</button>
+    <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.id)">delete</button>
+  </form>
+
+</div>
